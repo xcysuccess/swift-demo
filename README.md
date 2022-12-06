@@ -13,6 +13,22 @@ tabBar.backgroundColor = bgColor //一定要设置，否则第二个tabbar退到
 2. iOS15之后导航栏设置需要特殊处理
 [IOS15之UINavigationBar背景颜色不全](https://www.jianshu.com/p/ac6ccca005f8 )
 
+```objc
+func setNavStyle(){
+    if #available(iOS 15.0,*) {
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        appearance.backgroundColor = UIColor(red: 66/256.0, green: 176/256.0, blue: 216/256.0, alpha: 1)
+        navigationController?.navigationBar.standardAppearance = appearance;
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance;
+    } else {
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        //设置导航栏背景颜色
+        navigationController?.navigationBar.barTintColor = UIColor(red: 66/256.0, green: 176/256.0, blue: 216/256.0, alpha: 1)
+        navigationController?.navigationBar.isTranslucent = false
+    }
+}
+```
 
 ## 02-tableview-home
 参照[仿微信](https://github.com/developerjet/JetChat)，修复首页
