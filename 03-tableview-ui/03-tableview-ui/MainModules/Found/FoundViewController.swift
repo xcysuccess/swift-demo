@@ -56,36 +56,6 @@ class FoundViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.addSubview(tableView)
     }
-        
-   
-    
-//
-//    //  初始化和复用指定索引位置的UITableViewCell，必须实现。
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let model = self.array_datas_[indexPath.section]
-//        var cell = tableView.dequeueReusableCell(withIdentifier:FOUND_CELL_ID)
-//        if cell == nil {
-//          cell = UITableViewCell(style: .value1, reuseIdentifier: FOUND_CELL_ID)
-//        }
-//        cell?.textLabel?.text = "这个是标题"
-//        cell?.detailTextLabel?.text = "这里是内容了油"
-//        cell?.imageView?.image = UIImage(named: "icon")
-//        return cell!
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return cellH
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return headerH*3
-//    }
-//
-//    //MARK: UITableViewDelegate
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
-
 }
 
 extension FoundViewController:UITableViewDelegate, UITableViewDataSource{
