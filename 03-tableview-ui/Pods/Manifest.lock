@@ -3,6 +3,7 @@ PODS:
   - MJRefresh (3.7.5)
   - ReachabilitySwift (5.0.0)
   - SnapKit (5.6.0)
+  - SwiftDate (7.0.0)
   - SwiftyJSON (5.0.1)
   - YYText (1.0.7)
 
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - MJRefresh
   - ReachabilitySwift
   - SnapKit
+  - SwiftDate
   - SwiftyJSON
   - YYText
 
@@ -20,6 +22,7 @@ SPEC REPOS:
     - MJRefresh
     - ReachabilitySwift
     - SnapKit
+    - SwiftDate
     - SwiftyJSON
     - YYText
 
@@ -28,9 +31,10 @@ SPEC CHECKSUMS:
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftDate: bbc26e26fc8c0c33fbee8c140c5e8a68293a148a
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 06abcdb2fa3385a83ae03ca2aca3be7555147dfa
+PODFILE CHECKSUM: f284620dc2fc5c3abc9667d6175535210e8f52b1
 
 COCOAPODS: 1.11.3

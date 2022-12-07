@@ -10,6 +10,7 @@ target '03-tableview-ui' do
 	pod 'SwiftyJSON'
 	pod 'SnapKit'
   pod 'ReachabilitySwift'
+  pod 'SwiftDate'
 
   # *********************************************** Objective-C ***********************************************
 	pod 'MBProgressHUD'

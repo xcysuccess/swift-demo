@@ -44,7 +44,7 @@ class ViewController: UITabBarController {
         viewControllers = [navHome, navContact, navFound, navMine]
         setViewControllers(viewControllers, animated: false)
         // 设置 tabBar & tabBarItem
-        setTabBarItemAttributes(bgColor: UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1))
+        setTabBarItemAttributes(bgColor: kTabbarColor)
     }
 
     //这种方式比较灵活
