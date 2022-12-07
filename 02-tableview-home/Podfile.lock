@@ -1,0 +1,36 @@
+PODS:
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.7.5)
+  - ReachabilitySwift (5.0.0)
+  - SnapKit (5.6.0)
+  - SwiftyJSON (5.0.1)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - MBProgressHUD
+  - MJRefresh
+  - ReachabilitySwift
+  - SnapKit
+  - SwiftyJSON
+  - YYText
+
+SPEC REPOS:
+  trunk:
+    - MBProgressHUD
+    - MJRefresh
+    - ReachabilitySwift
+    - SnapKit
+    - SwiftyJSON
+    - YYText
+
+SPEC CHECKSUMS:
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: 5ef3dbabf801405aaf265cfd866740cb541041f5
+
+COCOAPODS: 1.11.3

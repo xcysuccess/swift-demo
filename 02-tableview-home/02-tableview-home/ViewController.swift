@@ -16,22 +16,32 @@ class ViewController: UITabBarController {
         initTabBar()
         // Do any additional setup after loading the view.
     }
-    
-    func initTabBar() {
-        let home = HomeViewController()
-        let navHome = UINavigationController(rootViewController: home)
 
-        navHome.tabBarItem.image = JYTool.imageResize(imageNamed:UIImage(named: "home_normal.png"), andResizeTo: CGSizeMake(25, 25))
-        navHome.tabBarItem.selectedImage = JYTool.imageResize(imageNamed:UIImage(named: "home_selected.png"),andResizeTo: CGSizeMake(25, 25))
-        navHome.tabBarItem.title = "首页"
+    func initTabBar() {
+        let getNavFromAttributesBlock = {(vc:UIViewController?,title:String,image: UIImage,
+                                          selectedImage: UIImage)->UINavigationController in
+            if let rootVC = vc {
+                // configure
+                rootVC.title = title
+                rootVC.tabBarItem.image = UIImage.imageWithRenderingMode(image)
+                rootVC.tabBarItem.selectedImage = UIImage.imageWithRenderingMode(selectedImage)
+                let nav = UINavigationController(rootViewController: rootVC)
+                return nav
+            }
+            return UINavigationController()
+        };
         
-        let mine = PersonViewController()
-        let navMine = UINavigationController(rootViewController: mine)
-        navMine.tabBarItem.image = JYTool.imageResize(imageNamed:UIImage(named: "mine_normal.png"), andResizeTo: CGSizeMake(25, 25))
-        navMine.tabBarItem.selectedImage = JYTool.imageResize(imageNamed:UIImage(named: "mine_selected.png"), andResizeTo: CGSizeMake(25, 25))
-        navMine.tabBarItem.title = "个人中心"
-        
-        viewControllers = [navHome, navMine]
+        let home = HomeViewController()
+        let contact = ContactViewController()
+        let found = FoundViewController()
+        let mine = MineViewController()
+
+        let navHome = getNavFromAttributesBlock(home, "微信",  UIImage(named: "ic_tabbar01_normal.png")!,  UIImage(named:"ic_tabbar01_selected.png")!)
+        let navContact = getNavFromAttributesBlock(contact, "通讯录",  UIImage(named:"ic_tabbar02_normal.png")!,  UIImage(named:"ic_tabbar02_selected.png")!)
+        let navFound = getNavFromAttributesBlock(found, "发现",  UIImage(named:"ic_tabbar03_normal.png")!,  UIImage(named:"ic_tabbar03_selected.png")!)
+        let navMine = getNavFromAttributesBlock(mine, "我",  UIImage(named:"ic_tabbar04_normal.png")!,  UIImage(named:"ic_tabbar04_selected.png")!)
+
+        viewControllers = [navHome, navContact, navFound, navMine]
         setViewControllers(viewControllers, animated: false)
         // 设置 tabBar & tabBarItem
         setTabBarItemAttributes(bgColor: UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1))

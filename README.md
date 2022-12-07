@@ -44,3 +44,20 @@ sudo arch -x86_64 gem install ffi
 arch -x86_64 pod install
 arch -x86_64 pod update
 ```
+
+2. [block闭包](https://www.jianshu.com/p/279406459686)
+
+```objc
+//KXRequest.swift
+typealias RequestBlock = (_ name:String)->Void;
+var block : RequestBlock?;
+func show(){
+    self.block?("kx");
+}
+//ViewController.swift
+let request = KXRequest();
+request.block = {(name:String) in
+    print(name);
+};
+request.show(); 
+```
